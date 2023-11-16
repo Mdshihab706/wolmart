@@ -1,0 +1,251 @@
+@import '../migzins/migzins';
+@import '../variables/variables';
+
+
+
+#titleContent {
+    .pages_heder {
+        padding: 70px 0;
+        background: #eee;
+        text-align: center;
+
+        h2 {
+            font-size: 34px;
+            font-weight: 700;
+            line-height: 37px;
+            color: $primary_color;
+        }
+        p{
+            font-size: 18px;
+            line-height: 28px;
+            color: $secendary_color;
+        }
+    }
+
+    .blogContent_menu {
+        padding: 15px 2px;
+        border-bottom: 1px solid #eee;
+
+        a {
+            font-size: 13px;
+            line-height: 19px;
+            color: $primary_color;
+
+            i {
+                font-size: 10px;
+                margin: 0 5px;
+            }
+        }
+    }
+    .titleSngke_cntent{
+        margin-top: 50px;
+        h3{
+            font-size: 20px;
+            font-weight: 700;
+            color: $primary_color;
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 13px;
+            color: $secendary_color;
+            line-height: 26px;
+        }
+    }
+    .titleSngke_cntenTwo{
+        margin-top: 50px;
+        .two_title{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+        }
+        h3{
+            font-size: 20px;
+            font-weight: 700;
+            color: $primary_color;
+            padding-bottom: 10px;
+            position: relative;
+            width: fit-content;
+            &::after{
+                content: "";
+                height: 3px;
+                width: 100%;
+                background: $hover_color;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        p{
+            font-size: 13px;
+            color: $secendary_color;
+            line-height: 26px;
+            margin-top: 20px;
+        }
+        a{
+            font-size: 14px;
+            font-weight: 600;
+            color: $primary_color;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+    .titleSngke_cntenThree{
+        margin-top: 50px;
+        .two_title{
+            display: flex;
+            justify-content: space-between;
+            ul{
+                display: flex;
+                gap: 10px;
+                li{
+                    padding: 11px 18px;
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: $primary_color;
+                    border: 1px solid #ccc;
+                    line-height: 13px;
+                    @include radious_5;
+                    &:first-child{
+                        color: $hover_color;
+                        border-color: $hover_color;
+                    }
+                }
+            }
+        }
+        h3{
+            font-size: 20px;
+            font-weight: 700;
+            color: $primary_color;
+            padding-bottom: 10px;
+            position: relative;
+            width: fit-content;
+        }
+        p{
+            font-size: 13px;
+            color: $secendary_color;
+            line-height: 26px;
+            margin-top: 20px;
+        }
+       
+    }
+    .titleSngke_cntentFour{
+        margin-top: 50px;
+        .two_title{
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            background: #f5f5f5;
+            ul{
+                display: flex;
+                gap: 10px;
+                li{
+                    font-size: 13px;
+                    color: $primary_color;
+                    line-height: 13px;
+                    @include radious_5;
+                    &:first-child{
+                        color: $hover_color;
+                        border-color: $hover_color;
+                    }
+                }
+            }
+        }
+        h3{
+            font-size: 20px;
+            font-weight: 700;
+            color: $primary_color;
+            position: relative;
+            width: fit-content;
+        }
+        p{
+            font-size: 13px;
+            color: $secendary_color;
+            line-height: 26px;
+            margin-top: 20px;
+        }
+       
+    
+    }
+    .titleSngke_cntentFive{
+        margin-top: 50px;
+        .two_title{
+            display: flex;
+         
+        }
+        h3{
+            font-size: 20px;
+            font-weight: 700;
+            color: $primary_color;
+            position: relative;
+            margin: 0 auto;
+            width: fit-content;
+        }
+        p{
+            font-size: 13px;
+            color: $secendary_color;
+            line-height: 26px;
+            margin-top: 20px;
+        }
+    }
+    .titleSngke_cntentSix{
+        margin-top: 50px;
+        .two_title{
+            text-align: center;
+            ul{
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                margin-top: 20px;
+                li{
+                    font-size: 13px;
+                    color: $primary_color;
+                    line-height: 13px;
+                    padding-bottom: 5px;
+                    cursor: pointer;
+                   
+                    &:first-child{
+                        color: $hover_color;
+                       border-bottom: 3px solid $hover_color;
+                       &::after{
+                        width: 0;
+                       }
+                    }
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        background: $hover_color;
+                        height: 3px;
+                        width: 0%;
+                        bottom: 0;
+                        left: 50%;
+                        @include right_50;
+                        @include timeOne
+                        
+                    }
+                    &:hover {
+                        &::after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        h3{
+            font-size: 20px;
+            font-weight: 700;
+            color: $primary_color;
+            position: relative;
+            width: fit-content;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 13px;
+            color: $secendary_color;
+            line-height: 26px;
+            margin-top: 20px;
+        }
+    
+    }
+}

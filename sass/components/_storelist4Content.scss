@@ -1,0 +1,43 @@
+// @import '../migzins/migzins';
+@import '../migzins/migzins';
+@import '../variables/variables';
+
+#storeList4{
+    .content_menu {
+        border-bottom: 1px solid #eee;
+        a {
+            font-size: 13px;
+            color: $secendary_color;
+            padding: 15px 0;
+        }
+    
+        span {
+            font-size: 10px;
+            margin: 10px 0;
+        }
+    }
+    .storeSngle_img{
+        padding-top: 40px;
+        padding-bottom: 60px ;
+        &:hover{
+            img{
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12)
+            }
+        }
+        img{
+            @include borderRaduos_50;
+            border: 1px solid #eee;
+            @include time;
+        }
+        p{
+            font-size: 14px;
+            font-weight: 600;
+            color: $primary_color;
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+}
+
+
+

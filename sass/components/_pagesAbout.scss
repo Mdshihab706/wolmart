@@ -1,0 +1,64 @@
+@import '../migzins/migzins';
+@import '../variables/variables';
+
+
+
+#pagedsContent {
+    .pages_heder {
+        padding: 70px 0;
+        background: #eee;
+        text-align: center;
+
+        h2 {
+            font-size: 34px;
+            font-weight: 700;
+            line-height: 37px;
+            color: $primary_color;
+        }
+    }
+
+    .blogContent_menu {
+        padding: 15px 2px;
+        border-bottom: 1px solid #eee;
+
+        a {
+            font-size: 13px;
+            line-height: 19px;
+            color: $primary_color;
+
+            i {
+                font-size: 10px;
+                margin: 0 5px;
+            }
+        }
+    }
+    .pages_marketing{
+        text-align: center;
+        margin-top: 85px;
+        h3{
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            color: $primary_color;
+            width: 800px;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 14px;
+            line-height: 26px;
+            color: $secendary_color;
+            width: 570px;
+            margin: 20px auto 40px;
+
+        }
+        .marketin_img{
+            img{
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+}
+}
+    }
+}    

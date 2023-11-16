@@ -1,0 +1,112 @@
+#pages_prodacts {
+    padding: 100px 0;
+    .shopAcroding_main {
+        position: sticky;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+
+        .vendor_acroManu {
+            margin-top: 15px;
+            margin-bottom: 10px;
+
+            .store {
+                color: $primary_color;
+            }
+
+            a {
+                font-size: 13px;
+                color: $secendary_color;
+                margin-right: 5px;
+
+                i {
+                    font-size: 10px;
+                }
+
+                &:hover {
+                    color: $primary_color;
+                }
+            }
+        }
+
+        .shopAccrodin {
+            .accordion-button::after {
+                flex-shrink: 0;
+                width: var(--bs-accordion-btn-icon-width);
+                height: var(--bs-accordion-btn-icon-width);
+                margin-left: auto;
+                content: "-";
+                background-image: none !important;
+                background-repeat: no-repeat;
+                background-size: var(--bs-accordion-btn-icon-width);
+                transition: var(--bs-accordion-btn-icon-transition);
+                font-size: 30px;
+                font-weight: 400 !important;
+            }
+
+            .accordion-button:not(.collapsed) {
+                color: $primary_color;
+                background-color: transparent;
+                padding: 15px 0 !important;
+                box-shadow: none;
+                border-bottom: none !important;
+
+            }
+
+            .accordion-item:first-of-type {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                // border-bottom: 1px solid #eee; 
+            }
+
+            .accordion-item {
+                border: none;
+
+            }
+
+            .accordion-button:focus {
+                z-index: 3;
+                border-color: transparent;
+                box-shadow: none;
+            }
+
+            .accordion-button {
+                padding: 15px 0;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 19px;
+                border: 0;
+                border-radius: 0;
+                border-bottom: 1px solid #eee !important;
+                position: relative;
+
+              
+                
+            }
+        }
+
+        .accordion-body {
+            padding: 15px 0;
+            p{
+                font-size: 14px;
+                line-height: 28px;
+                color: $primary_color;
+            }
+           
+
+          
+        }
+    }
+    .acroding_img{
+        img{
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+}
+    }
+}    

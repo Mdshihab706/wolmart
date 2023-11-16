@@ -1,0 +1,306 @@
+@import '../migzins/migzins';
+@import '../variables/variables';
+
+#depertment {
+    padding: 50px 0;
+
+    h2 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25px;
+        margin-bottom: 20px;
+    }
+
+    .depertment_wraper {
+        display: flex;
+        gap: 20px;
+
+        .depertment_items {
+            cursor: pointer;
+
+            .dep_imgFirst {
+                position: relative;
+
+                &:hover .dep_imgSecend {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+
+                .dep_imgSecend {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    @include timeOne;
+
+                }
+
+                .depert_icon {
+                    visibility: hidden;
+                    opacity: 0;
+                    @include time;
+
+                    ul {
+                        display: flex;
+                        gap: 10px;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 7%;
+                        right: 7%;
+
+
+                        li {
+                            a {
+                                font-size: 16px;
+                                height: 36px;
+                                width: 36px;
+                                color: #999;
+                                background: #fff;
+                                text-align: center;
+                                line-height: 36px;
+                                border-radius: 50%;
+                                -webkit-border-radius: 50%;
+                                -moz-border-radius: 50%;
+                                -ms-border-radius: 50%;
+                                -o-border-radius: 50%;
+                                @include time;
+
+                                &:hover {
+                                    background: $hover_color;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+            .dep_text {
+                text-align: center;
+                padding: 20px;
+
+                p {
+                    font-size: 13px;
+                    font-weight: 500;
+                    line-height: 15px;
+                    color: $primary_color;
+                }
+
+                ul {
+                    justify-content: center;
+                    display: flex;
+                    margin-top: 10px;
+                    margin-bottom: 5px;
+
+                    li {
+                        font-size: 12px;
+                        line-height: 12px;
+                        color: #f77c29;
+
+                        &:nth-child(4) {
+                            color: #D8D8D8;
+                        }
+
+                        &:nth-child(5) {
+                            color: #D8D8D8;
+                        }
+
+                        span {
+                            color: #999;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+
+                h3 {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 25px;
+                    color: $primary_color;
+                }
+
+                .secend_star {
+                    li {
+                        &:nth-child(4) {
+                            color: #f77c29 !important;
+                        }
+                    }
+
+                }
+
+                .five_star {
+                    li {
+                        color: #f77c29 !important;
+                    }
+
+                }
+            }
+            &:hover .depert_icon {
+                visibility: visible;
+                opacity: 1;
+            }
+
+        }
+
+        .off_7 {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "7% OFF";
+                background: #f77c29;
+                color: #fff;
+                height: 24px;
+                width: 60px;
+                line-height: 24px;
+                font-size: 12px;
+                text-align: center;
+                top: 20px;
+                left: 22px;
+                z-index: 99;
+            }
+        }
+
+        .off_4 {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "4% OFF";
+                background: #f77c29;
+                color: #fff;
+                height: 24px;
+                width: 60px;
+                line-height: 24px;
+                font-size: 12px;
+                text-align: center;
+                top: 20px;
+                left: 22px;
+                z-index: 99;
+            }
+        }
+    }
+
+    .depertment_button {
+        justify-content: center;
+        margin-bottom: 30px;
+
+        .nav-tabs {
+            --bs-nav-tabs-border-width: 0;
+
+        }
+
+        .nav-link {
+            margin-bottom: 0 !important;
+            border: none !important;
+            color: $primary_color;
+            border: 1px solid #ccc !important;
+            border-top-left-radius: 5px !important;
+            border-top-right-radius: 5px !important;
+            @include radious_5;
+            padding: 11px 19px;
+            font-size: 13px;
+            line-height: 13px;
+            font-weight: 600;
+            margin-right: 10px;
+
+            &:hover {
+                color: $hover_color;
+                border-color: $hover_color !important;
+            }
+        }
+
+        .nav-tabs .nav-link.active {
+            color: $hover_color !important;
+            background-color: var(--bs-nav-tabs-link-active-bg);
+            border-color: $hover_color !important;
+        }
+    }
+
+    .depertment_shopNow {
+        margin-top: 40px;
+
+        .shopNow_main {
+            .shop_img {
+                position: relative;
+
+                img {
+                    @include radious_5;
+                }
+
+                .shop_text {
+                    position: absolute;
+                    top: 14%;
+                    left: 6.5%;
+
+                    p {
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 16px;
+                        color: #eee;
+                    }
+
+                    h3 {
+                        font-size: 28px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        color: #fff;
+                        width: 263px;
+                        margin-top: 10px;
+                        margin-bottom: 20px;
+
+                    }
+
+                    a {
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 25px;
+                        color: #fff;
+
+                        span {
+                            margin-left: 10px;
+                        }
+
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            height: 3px;
+                            width: 0%;
+                            left: 50%;
+                            bottom: 0;
+                            background: #fff;
+                            position: absolute;
+                            transform: translateX(-50%);
+                            -webkit-transform: translateX(-50%);
+                            -moz-transform: translateX(-50%);
+                            -ms-transform: translateX(-50%);
+                            -o-transform: translateX(-50%);
+                            @include time;
+                        }
+
+                        &:hover::after {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .trending_text {
+                    p {
+                        color: $primary_color;
+                    }
+
+                    h3 {
+                        color: $primary_color;
+                    }
+
+                    a {
+                        color: $primary_color;
+                    }
+                }
+            }
+        }
+    }
+}

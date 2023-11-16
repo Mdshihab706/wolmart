@@ -1,0 +1,185 @@
+@import '../variables/variables';
+@import '../migzins/migzins';
+
+#banner {
+    .bannerOne {
+        
+            padding: 65px 0;
+            height: 520px;
+        .bannerOne_text {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: center;
+
+            h3 {
+                font-size: 40px;
+                line-height: 40px;
+                color: $secendary_color;
+
+                .mens {
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        height: 3px;
+                        width: 100%;
+                        background: #f77c29;
+                        bottom: 10px;
+                        left: 0;
+                        position: absolute;
+                    }
+                }
+            }
+
+            h2 {
+                font-size: 43px;
+                font-weight: 700;
+                line-height: 50px;
+                color: $primary_color;
+                margin-top: 5px;
+            }
+
+            h4 {
+
+                font-size: 24px;
+                line-height: 44px;
+                color: $secendary_color;
+                margin-bottom: 20px;
+
+                span {
+                    color: #f77c29;
+                    font-weight: 700;
+                }
+            }
+
+            .bannerOne_button {
+                a {
+                    padding: 20px 35px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 14px;
+                    color: #fff;
+                    background: $primary_color;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+
+                    span {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .bannerTwo {
+        height: 520px;
+
+        .bannerOne_text {
+            padding: 153px 0;
+
+            h3 {
+                font-size: 34px;
+                line-height: 45px;
+                color: $secendary_color;
+
+                span {
+                    color: #f77c29;
+                }
+            }
+
+            h2 {
+                font-size: 43px;
+                line-height: 54px;
+                font-weight: 700;
+                color: $primary_color;
+            }
+
+            h4 {
+                font-size: 22px;
+                line-height: 44px;
+                color: $secendary_color;
+
+            }
+
+            .bannerTwo_button {
+                a {
+
+                    @include button($clr: $primary_color, $bg: transparent);
+                    border: 2px solid $primary_color;
+                    @include time;
+                    margin-top: 21px;
+
+                    &:hover {
+                        background: $primary_color;
+                        color: #fff;
+                    }
+
+                    span {
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+        }
+
+        .bannerTwo_man {
+            position: relative;
+
+            .man_img {
+                position: absolute;
+                top: -20px;
+                right: 0;
+            }
+        }
+
+    }
+
+    .banneThrd {
+            padding: 60px 0 20px;
+            height: 520px;
+        .bannerThrd_text {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            align-items: end    ;
+            h3 {
+                font-size: 22px;
+                line-height: 35px;
+                color: $secendary_color;
+            }
+
+            h2 {
+                font-size: 36px;
+                line-height: 48px;
+                color: $secendary_color;
+            }
+
+            h4 {
+                font-size: 45px;
+                font-weight: 700;
+                line-height: 70px;
+                color: $primary_color;
+                
+                span{
+                    background: #f77c29;
+                    color: #fff;
+                }
+            }
+            .bannerThrd_button{
+                a{
+                    @include button ($clr: #fff, $bg: $primary_color);
+                    margin-top: 20px;
+                    span {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

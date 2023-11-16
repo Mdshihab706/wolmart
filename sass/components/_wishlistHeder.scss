@@ -1,0 +1,1224 @@
+// @import '../migzins/migzins';
+@import '../migzins/migzins';
+@import '../variables/variables';
+
+#wishlist_heder {
+
+    //==== heder_head prt strt====
+    .heder_head {
+        background: #F5F6F8;
+
+        font-size: 12px;
+
+        .heder_left {
+            p {
+
+                line-height: 16px;
+                padding: 14px 0;
+                color: #333;
+            }
+        }
+    }
+
+    .right_wrap {
+        display: flex;
+        justify-content: center;
+
+
+        .heder_right {
+            display: flex;
+            gap: 15px;
+            justify-content: end;
+
+            .heder_country {
+                display: flex;
+                align-items: center;
+
+                .main_county {
+                    display: flex;
+                    gap: 32px;
+                    padding-right: 16px;
+                    border-right: 2px solid #ccc;
+
+
+
+                    li {
+                        z-index: 11;
+
+                        &:hover ul {
+                            visibility: visible;
+                            opacity: 1;
+                            top: 100%;
+                            transition: .3s;
+
+                        }
+
+                        a {
+                            color: #333;
+                            padding: 10px 0;
+                            display: flex;
+                            gap: 5px;
+                            align-items: center;
+
+                            &:hover {
+                                color: #336699;
+                            }
+
+                            span {
+                                margin-left: 3px;
+
+                            }
+
+                        }
+
+                        position: relative;
+
+                        ul {
+                            background: #fff;
+                            box-shadow: 0 4px 20px -8px rgba(0, 0, 0, 0.3);
+                            padding: 8px 0;
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            visibility: hidden;
+                            opacity: 0;
+
+                            cursor: pointer;
+
+                            &::before {
+                                content: "";
+                                border: 11px solid transparent;
+                                border-bottom: 11px solid #fff;
+                                position: absolute;
+                                top: -22px;
+                                left: 50%;
+                                transform: translate(-50%);
+                            }
+
+
+
+
+                            li {
+                                padding: 8px 12px;
+                                line-height: 12px;
+                                color: #333;
+                                display: flex;
+                                // align-items: center;
+                                gap: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .heder_contact {
+                display: flex;
+                justify-content: center;
+
+                ul {
+                    display: flex;
+                    gap: 32px;
+                    align-items: center;
+
+                    li {
+                        display: flex;
+
+                        a {
+                            color: #333;
+                            transition: .3s;
+                            padding: 10px 0;
+
+                            &:hover {
+                                color: #336699;
+                            }
+                        }
+
+                        span {
+                            margin-right: 5px;
+
+                            i {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //==== reg_popup prt strt====
+    .reg_popup {
+        span.popup_close {
+            position: absolute;
+            top: -30px;
+            right: 0;
+            color: #fff;
+            @include time;
+            cursor: pointer;
+
+            &:hover {
+                transform: rotate(90deg) scale(1.4);
+                -webkit-transform: rotate(90deg) scale(1.4);
+                -moz-transform: rotate(90deg) scale(1.4);
+                -ms-transform: rotate(90deg) scale(1.4);
+                -o-transform: rotate(90deg) scale(1.4);
+            }
+        }
+
+        .modal-dialog {
+            margin: 65px auto;
+
+        }
+
+        .modal-content {
+
+            border: none !important;
+            border-radius: 0;
+
+        }
+
+        .modal-body {
+
+            padding: 50px 50px 40px;
+
+            .nav_button {
+                border-bottom: 1px solid #eee !important;
+                gap: 2%;
+
+                .nav-link.active {
+                    color: #007aff !important;
+                    background-color: transparent !important;
+                    border-color: transparent !important;
+                    position: relative;
+
+                    &::after {
+                        background: #007aff;
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        top: 100%;
+                        left: 0;
+                    }
+                }
+
+                .nav-link:hover {
+                    isolation: isolate;
+                    border-color: transparent !important;
+                }
+
+                button {
+                    width: 49%;
+                    position: relative;
+                    color: #333;
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    @include time;
+
+                    &:hover {
+                        color: #007aff !important;
+
+                        &::after {
+                            background: #007aff;
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 2px;
+                            top: 100%;
+                            left: 0;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        // fprm
+        .sinin_from {
+            padding: 30px 0px 25px;
+
+            input {
+                width: 100%;
+                border: 1px solid #eee;
+                outline: none;
+                padding: 12px 20px;
+                margin-bottom: 25px;
+            }
+
+            p {
+                font-size: 13px;
+                line-height: 24px;
+                color: #666;
+                margin-bottom: 5px;
+            }
+
+            .vendor {
+                font-size: 13px;
+                line-height: 22px;
+                color: #336699 !important;
+            }
+
+            .chekbox {
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                margin-bottom: 25px;
+
+                a.chek_link {
+                    font-size: 13px;
+                    line-height: 22px;
+                    color: #336699 !important;
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 14px;
+                    line-height: 24px;
+
+
+                    input {
+                        width: fit-content;
+                        margin-bottom: 0;
+                    }
+                }
+
+                a {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: #a94442 !important;
+
+                    &:hover {
+                        text-decoration: revert;
+                    }
+                }
+            }
+
+            .sing_button button {
+                width: 100%;
+                border: none;
+                padding: 13px;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 14px;
+                text-transform: uppercase;
+                color: #fff;
+                background: #336699;
+            }
+        }
+
+        // form
+        .form_sosiyal {
+            p {
+                font-size: 14px;
+                line-height: 24px;
+                text-align: center;
+                color: #666;
+                margin: 25px 0;
+            }
+        }
+
+        .popup_icon ul {
+            justify-content: center;
+            gap: 10px !important;
+
+            li {
+                &:first-child i {
+                    color: #1b4f9b;
+                    border-color: #1b4f9b;
+                    @include time;
+
+                    &:hover {
+                        background: #1b4f9b;
+                        color: #fff;
+                    }
+                }
+
+                &:nth-child(3) i {
+                    color: #00adef;
+                    border-color: #00adef;
+                    @include time;
+
+                    &:hover {
+                        background: #00adef;
+                        color: #fff;
+                    }
+                }
+
+                &:nth-child(2) i {
+                    color: #dd4b39;
+                    border-color: #dd4b39;
+                    @include time;
+
+                    &:hover {
+                        background: #dd4b39;
+                        color: #fff;
+                    }
+                }
+            }
+
+            i {
+                width: 32px;
+                height: 32px;
+                border: 1px solid black;
+                text-align: center;
+                line-height: 32px;
+                border-radius: 50%;
+                font-size: 15px;
+            }
+        }
+    }
+
+    //==== reg_popup prt ebd====
+    //==== heder_head prt end====
+
+
+    //====== logo part sret=====
+
+    #logo_part {
+        padding: 32px 0;
+
+        .logo img {
+            width: 144px !important;
+        }
+
+        .sarch_part {
+            border: 2px solid #336699;
+            @include radious_5;
+
+            .sarch_form {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            select {
+                border: none;
+                font-size: 12px;
+                color: #666;
+                padding: 0 20px 0px 12 px;
+                outline: none;
+                cursor: pointer;
+                border-right: 1px solid #ccc;
+                position: relative;
+                width: 33.33%;
+
+                &:before {
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    color: red;
+                    background: red;
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                }
+
+            }
+
+            input {
+                border: none;
+                padding: 11px;
+                font-size: 13px;
+                padding-right: 80px;
+                outline: none;
+                width: 50%;
+            }
+
+            button {
+                border: none;
+                background: none;
+                font-size: 20px;
+                color: #666;
+                // padding: 4px 17px 10px 2px;
+                width: 16.66%;
+            }
+        }
+
+        .contack_wrapper {
+
+            display: flex;
+            gap: 45px;
+            justify-content: space-between;
+            margin-left: 55px;
+
+            .call_info {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    height: 100%;
+                    width: 1px;
+                    background: #e5e5e5;
+                    right: -28px;
+                    position: absolute;
+
+                }
+
+                a {
+                    font-size: 30px;
+                    line-height: 30px;
+                    color: #666;
+                    @include time;
+
+                    &:hover {
+                        color: #336699;
+                    }
+                }
+
+                .coll_ditls {
+
+                    h4 {
+                        font-size: 13px;
+                        line-height: 15px;
+                        color: #333;
+                        @include time;
+
+                        &:hover {
+                            color: #336699;
+                        }
+                    }
+
+                    a {
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 27px;
+                        color: #333;
+                        @include time;
+
+                        &:hover {
+                            color: #336699;
+                        }
+                    }
+                }
+            }
+
+            .logo_icon {
+                display: flex;
+                gap: 22px;
+                align-items: center;
+
+                ul {
+                    display: flex;
+                    gap: 20px;
+
+                    li {
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        align-items: center;
+                        cursor: pointer;
+
+                        &:hover a {
+                            color: $hover_color;
+                        }
+
+                        &:hover span {
+                            color: $hover_color;
+                        }
+
+                        a {
+                            font-size: 27px;
+                            color: #333;
+                            width: 27px;
+                            height: 30px;
+                            @include time;
+
+                        }
+
+                        span {
+                            font-size: 12px;
+                            line-height: 12px;
+                            @include time;
+                        }
+                    }
+                }
+
+                .logo_card {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    position: relative;
+
+                    &:hover span {
+                        color: $hover_color;
+                    }
+
+                    &:hover i {
+                        color: $hover_color;
+                    }
+
+                    &:before {
+                        content: "2";
+                        width: 19px;
+                        height: 19px;
+                        line-height: 19px;
+                        background: #336699;
+                        font-size: 12px;
+                        text-align: center;
+                        border-radius: 50%;
+                        color: #fff;
+                        position: absolute;
+                        right: -4px;
+                        top: -6px;
+                    }
+
+                    a {
+                        height: 27px;
+                    }
+
+                    i {
+                        font-size: 27px;
+                        color: #333;
+                        @include time;
+                    }
+
+                    span {
+                        font-size: 12px;
+                        line-height: 12px;
+                        @include time;
+                    }
+
+                    .off_canva {
+                        padding: 30px 0 30px 30px;
+                        width: 345px;
+
+                        span {
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            font-size: 14px !important;
+                            line-height: 15px;
+                            color: #666;
+                        }
+
+                        .offcanvas-header {
+
+                            padding: 0;
+                            padding-bottom: 15px;
+                            border-bottom: 1px solid #eee;
+                            padding-right: 30px;
+
+                            h5 {
+                                font-size: 16px;
+                                font-weight: 700;
+                                line-height: 16px;
+                            }
+                        }
+
+                        .offcanvas-body {
+
+                            padding: 0;
+                            padding-top: 20px;
+                            padding-right: 30px;
+
+                            .canva_item {
+                                display: flex;
+                                gap: 60px;
+                                align-items: center;
+                                margin-bottom: 20px;
+
+                                .canva_text {
+                                    p {
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                        line-height: 20px;
+                                        margin-bottom: 10px;
+                                    }
+
+                                    h4 {
+                                        font-size: 16px;
+                                        line-height: 25px;
+                                        color: #999;
+                                        display: flex;
+                                        gap: 10px;
+
+                                        span {
+                                            font-size: 16px !important;
+                                            font-weight: 600;
+                                            color: $hover_color;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .subtotal_wrap {
+                                padding-top: 20px;
+                                border-top: 1px solid #eee;
+
+                                .subtotal {
+                                    display: flex;
+                                    justify-content: space-between;
+
+                                    p {
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        color: #333;
+                                    }
+
+                                    span {
+                                        font-size: 16px !important;
+                                        font-weight: 600;
+                                        color: #333;
+                                    }
+                                }
+
+                                .sub_button {
+                                    display: flex;
+                                    gap: 10px;
+                                    margin-top: 25px;
+
+                                    button {
+                                        font-size: 13px;
+                                        font-weight: 600;
+                                        border: none;
+                                        background: #336699;
+                                        color: #fff;
+                                        width: 50%;
+                                        height: 36px;
+                                        border: 2px solid #336699;
+                                        @include radious_5;
+                                        @include time;
+
+                                        &:hover {
+                                            background: #3c78b4;
+                                            color: #fff;
+                                            border: 2px solid #3c78b4;
+                                        }
+
+                                        &:first-child {
+                                            background: #fff;
+                                            border: 2px solid #333;
+                                            color: #333;
+
+                                            &:hover {
+                                                background: #336699;
+                                                color: #fff;
+                                                border: 2px solid #336699;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    //====== logo part sret======
+
+    //====== main_menu part strt=====
+    .main_menu {
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+
+        //====== side_menu part strt=====
+        .side_menu {
+            .browes_cattegory {
+                background: #fff;
+                position: relative;
+                align-items: center;
+                @include time;
+                
+                &:hover{
+                        background: $hover_color;
+                        color: #fff;
+                }
+                &:hover .cattagory_hed h2{
+                        color: #fff;
+                }
+
+                .cattagory_hed {
+                    justify-content: space-between;
+                    padding: 15px 20px 15px 10px;
+                    display: flex;
+                    border-left: 1px solid #eee;
+                    border-right: 1px solid #eee;
+                    align-items: center;
+                   
+
+                    h2 {
+                        padding: 0 10px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: #333;
+                        @include time;
+
+                        i {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                .shopSub_browes {
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                    position: absolute;
+                    width: 100%;
+                    background: #fff;
+                    z-index: 999;
+                    visibility: hidden;
+                    opacity: 0;
+                    @include time;
+
+                    .sub_browsmain >li {
+                        padding: 0 10px;
+                        border-bottom: 1px solid #eee;
+
+                        &:hover a {
+                            color: $hover_color;
+                        }
+
+                        &:hover .fashion_right {
+                            color: $hover_color;
+                            transform: translateX(5px);
+                            -webkit-transform: translateX(5px);
+                            -moz-transform: translateX(5px);
+                            -ms-transform: translateX(5px);
+                            -o-transform: translateX(5px);
+                        }
+
+                        >a {
+                            display: flex;
+                            justify-content: space-between;
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 11px 10px 11px 10px;
+                            color: #333;
+                            font-size: 13px;
+                            font-weight: 500;
+                            @include time;
+
+                            span {
+                                i {
+                                    margin-right: 5px;
+                                }
+                            }
+
+                            .fashion_right {
+                                @include time
+                            }
+                        }
+
+                        position: relative;
+
+                        &:hover .fashion_mega {
+                            visibility: visible;
+                            opacity: 1;
+                            left: 100%;
+                            @include time;
+                        }
+
+                        &:hover .furniture_wrapp {
+                            visibility: visible;
+                            opacity: 1;
+                            left: 100%;
+                            @include time;
+                        }
+
+                        .fashion_mega {
+                            position: absolute;
+                            top: 0;
+                            left: 95%;
+                            width: 685px;
+                            padding-left: 20px;
+                            box-shadow: 0 2px 35px rgba(0, 0, 0, 0.1);
+                            display: flex;
+                            justify-content: space-between;
+                            background: #fff;
+                            visibility: hidden;
+                            opacity: 0;
+                            color: $primary_color;
+
+                            .fashion_firstline {
+                                width: 100%;
+                                padding: 25px 20px 0 0;
+
+                                h4 {
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                    line-height: 14px;
+                                    padding-bottom: 12px;
+                                    border-bottom: 1px solid #eee;
+                                    margin-bottom: 5px;
+                                    color: $primary_color;
+                                }
+
+                                ul {
+
+                                    // padding-bottom: 40px;
+                                    li {
+                                        &:last-child {
+                                            padding-bottom: 15px;
+                                        }
+
+                                        a {
+                                            font-size: 14px;
+                                            line-height: 15px;
+                                            padding: 7px 0;
+                                            color: #666;
+
+                                            &:hover {
+                                                color: $hover_color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .fashion_img {
+                                width: 100%;
+                            }
+                        }
+
+                        .furniture_wrapp {
+                            width: 880px !important;
+                            position: absolute;
+                            top: 0;
+                            left: 95%;
+                            padding-left: 20px;
+                            background: #fff;
+                            box-shadow: 0 2px 35px rgba(0, 0, 0, 0.1);
+                            z-index: 1;
+                            visibility: hidden;
+                            opacity: 0;
+
+                            .furniture_mega {
+                                display: flex;
+                                justify-content: space-between;
+
+                                .fashion_firstline {
+                                    width: 100%;
+                                    padding: 25px 20px 0 0;
+
+                                    h4 {
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        line-height: 14px;
+                                        padding-bottom: 12px;
+                                        border-bottom: 1px solid #eee;
+                                        margin-bottom: 5px;
+                                        color: $primary_color;
+                                    }
+
+                                    ul {
+                                        li {
+                                            &:last-child {
+                                                padding-bottom: 15px;
+                                            }
+
+                                            a {
+                                                font-size: 14px;
+                                                line-height: 15px;
+                                                padding: 7px 0;
+                                                color: #666;
+
+                                                &:hover {
+                                                    color: $hover_color;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .fashion_img {
+                                    width: 100%;
+                                }
+                            }
+
+                            .fasion_img {
+                                display: flex;
+                                padding: 0 20px 20px 0;
+
+                                img {
+                                    margin-right: 20px;
+                                    border-radius: 5px;
+                                    -webkit-border-radius: 5px;
+                                    -moz-border-radius: 5px;
+                                    -ms-border-radius: 5px;
+                                    -o-border-radius: 5px;
+                                }
+                            }
+                        }
+
+                        .all_cetagory a span {
+                            font-size: 13px;
+                            font-weight: 600;
+                            line-height: 15px;
+                            color: $hover_color;
+                        }
+                    }
+                    li.all_cetagory{
+                        a {
+                         justify-content: normal;
+                        span {
+                        font-size: 14px;
+                        font-weight: 600;
+                        letter-spacing: .10px;
+                        color: $hover_color;
+                        margin-right: 10px;
+                    }
+                }
+                    }
+                }
+                &:hover .shopSub_browes{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+
+        // }
+    }
+
+    //====== side_menu part end=====
+
+    .vendor_nav {
+        padding: 0 !important;
+
+        .navbar-nav {
+            gap: 13px !important;
+
+            .nav-item {
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+                position: relative;
+                padding: 11px 0;
+                &:hover .vebdor_drop{
+                    visibility: visible;
+                    opacity: 1;
+                    top: 100%;
+                }
+                &:hover>a{
+                    color: $hover_color;
+                }
+            
+                .vebdor_drop {
+                    box-shadow: 0 2px 35px rgba(0, 0, 0, 0.1);
+                    background: #fff;
+                    padding: 15px 0;
+                    position: absolute;
+                    top: 80%;
+                    left: 0;
+                    z-index: 999;
+                    visibility: hidden;
+                    opacity: 0;
+                    @include time;
+                    li {
+                        &:hover >a{
+                            color: $hover_color !important;
+                        }
+                        .vebdor {
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 10px 20px;
+                            color: #666;
+                            font-size: 14px;
+                            line-height: 14px;
+                            width: 215px;
+                           @include time;
+                           &::after{
+                            width: 0 !important;
+                           }
+                        }
+                        position: relative;
+                        .vensecend_drop{
+                            box-shadow: 0 2px 35px rgba(0, 0, 0, 0.1);
+                            background: #fff;
+                            padding: 15px 0;
+                            position: absolute;
+                            top: -10%;
+                            left: 100%;
+                            width: 215px;
+                            visibility: hidden;
+                            opacity: 0;
+                            @include time;
+                        
+                            li a{
+                                padding: 10px 20px;
+                                color: #666;
+                                font-size: 14px;
+                                line-height: 14px;
+                                @include time;
+                                &::after{
+                                    width: 0 !important;
+                                   }
+                        }
+                        }
+                        &:hover .vensecend_drop{
+                            visibility: visible;
+                            opacity: 1;
+                            top: 0;
+        
+                        }
+                    }
+                }
+                span {
+                    margin-right: 10px;
+                }
+                &:hover .shop_mega {
+                    visibility: visible;
+                    opacity: 1;
+                    top: 100%;
+                    @include time;
+                }
+
+                .nav-link {
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 15px;
+                    color: #333;
+                    position: relative;
+                    @include time;
+                    display: inline-block;
+                    &::after {
+                        content: "";
+                        width: 0;
+                        background: $hover_color;
+                        height: 3px;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        @include time
+                    }
+                    &:hover::after {
+                        width: 100%;
+                        left: 0;
+                    }
+
+                    &:hover {
+                        color: $hover_color;
+                    }
+                }
+                &:nth-child(5) a {
+                    color: $hover_color;
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        background: $hover_color;
+                        height: 3px;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        @include time
+                    }
+                }
+            }
+
+        }
+
+        .shop_mega {
+            width: 800px;
+            box-shadow: 0 2px 35px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 80%;
+            left: 0;
+            padding: 0 20px 5px 20px;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 999;
+            .fashion_firstline {
+                width: 100%;
+                padding: 25px 10px 0 0;
+
+                h4 {
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 14px;
+                    padding-bottom: 12px;
+                    border-bottom: 1px solid #eee;
+                    margin-bottom: 5px;
+                }
+
+                ul {
+
+                    // padding-bottom: 40px;
+                    li {
+                        &:last-child {
+                            padding-bottom: 15px;
+                        }
+
+                        a {
+                            font-size: 14px;
+                            line-height: 15px;
+                            padding: 7px 0;
+                            color: #666 !important;
+                            font-weight: 500;
+                            &::after{
+                                width: 0 !important;
+                            }
+
+                            &:hover {
+                                color: $hover_color;
+                            }
+                        }
+
+                        .hot {
+                            font-size: 10px;
+                            font-weight: 600;
+                            line-height: 10px;
+                            background: #ff9742;
+                            padding: 0 5px;
+                            margin-left: 10px;
+                            color: #fff;
+                        }
+
+                        .new {
+                            font-size: 10px;
+                            font-weight: 600;
+                            line-height: 10px;
+                            background: $hover_color;
+                            padding: 0 5px;
+                            margin-left: 8px;
+                            margin-right: 0;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .manu_order {
+        display: flex;
+        justify-content: end;
+        gap: 30px;
+        height: 100%;
+        align-items: center;
+
+        .track a {
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            gap: 10px;
+            color: #333;
+            align-items: center;
+            @include time;
+
+            span {
+                font-size: 20px;
+            }
+
+            &:hover {
+                color: $hover_color;
+            }
+        }
+    }
+    // ====main_menu paer end====
+}
+
+

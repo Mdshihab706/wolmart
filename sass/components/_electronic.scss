@@ -1,0 +1,313 @@
+@import '../migzins/migzins';
+@import '../variables/variables';
+
+#electic {
+    padding: 60px 0;
+
+    .clothing_heder {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 20px;
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            color: $primary_color;
+        }
+
+        a {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 24px;
+            color: $primary_color;
+            @include time;
+
+            span {
+                margin-left: 10px;
+            }
+
+            &:hover {
+                color: $hover_color;
+            }
+
+        }
+    }
+
+    .clothing_backgorund {
+        @include radious_5;
+
+        .electronic_text {
+            padding: 40px;
+
+            h5 {
+                font-size: 18px;
+                line-height: 22px;
+                color: #fff;
+                position: relative;
+                padding-bottom: 13px;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 3px;
+                    width: 35px;
+                    background: #fff;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+
+            h3 {
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 35px;
+                color: #fff;
+                margin-top: 10px;
+                margin-bottom: 20px;
+
+                span {
+                    font-weight: 400;
+                }
+            }
+
+            .clothing_button {
+                a {
+
+                    color: #fff;
+                    background: transparent;
+                    border: 2px solid #fff;
+                    padding: 8px 20px;
+                    font-size: 13px;
+                    font-weight: 600;
+                    @include radious_5;
+                    @include time;
+
+                    &:hover {
+                        background: #fff;
+                        color: $hover_color;
+                    }
+                }
+            }
+        }
+    }
+
+    .depertment_items {
+        cursor: pointer;
+
+        .dep_imgFirst {
+            position: relative;
+
+            &:hover .dep_imgSecend {
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            .dep_imgSecend {
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include timeOne;
+
+            }
+
+            .depert_icon {
+                visibility: hidden;
+                opacity: 0;
+                @include time;
+
+                ul {
+                    display: flex;
+                    gap: 10px;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 7%;
+                    right: 7%;
+
+
+                    li {
+                        a {
+                            font-size: 16px;
+                            height: 36px;
+                            width: 36px;
+                            color: #999;
+                            background: #fff;
+                            text-align: center;
+                            line-height: 36px;
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                            @include time;
+
+                            &:hover {
+                                background: $hover_color;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .dep_text {
+            text-align: center;
+            padding: 20px;
+
+            p {
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 15px;
+                color: $primary_color;
+                @include time;
+
+                &:hover {
+                    color: $hover_color;
+                }
+            }
+
+            ul {
+                justify-content: center;
+                display: flex;
+                margin-top: 10px;
+                margin-bottom: 5px;
+
+                li {
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: #f77c29;
+
+                    &:nth-child(4) {
+                        color: #D8D8D8;
+                    }
+
+                    &:nth-child(5) {
+                        color: #D8D8D8;
+                    }
+
+                    span {
+                        color: #999;
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            h3 {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 25px;
+                color: $primary_color;
+
+                span {
+                    color: #aaa;
+                    font-weight: 400;
+                    text-decoration: line-through;
+                    margin-left: 5px;
+                }
+            }
+
+            .secend_star {
+                li {
+                    &:nth-child(4) {
+                        color: #f77c29 !important;
+                    }
+                }
+
+            }
+
+            .five_star {
+                li {
+                    color: #f77c29 !important;
+                }
+
+            }
+        }
+        &:hover .depert_icon {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .todays_fashion {
+        padding: 45px;
+        margin-top: 60px;
+        @include radious_5;
+
+        .todays_main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .todays_text {
+                display: flex;
+                .off {
+                    display: flex;
+                    gap: 3px;
+                    border-right: 2px solid $secendary_color;
+                    padding-right: 40px;
+                    margin-right: 40px;
+
+                    h3 {
+                        display: flex;
+                        font-size: 70px;
+                        font-weight: 700;
+                        line-height: 70px;
+                        color: #f77c29;
+                    }
+
+                    .sub {
+                        span {
+                            flex-direction: column;
+                            display: flex;
+                            font-size: 44px;
+                            font-weight: 600;
+                            line-height: 52px;
+                            color: #f77c29;
+                            &:last-child{
+                                color: #f77c29;
+                                font-size: 20px;
+                                line-height: 4px;
+                            }
+                        }
+                    }
+                }
+                h4{
+                    font-size: 30px;
+                    font-weight: 700;
+                    line-height: 36px;
+                    color: #fff;
+                }
+                p{
+                    font-size: 18px;
+                    line-height: 33px;
+                    color: #fff;
+                    span{
+                        background: #fff;
+                        color: $primary_color;
+                        font-weight: 700;
+                    }
+
+                }
+            }
+            .todays_button{
+                a{
+                    @include button($clr: #fff, $bg: transparent);
+                    border: 2px solid #fff;
+                    padding: 15px 30px;
+                    @include time;
+                    span{
+                        margin-left: 5px;
+                    }
+                    &:hover{
+                        background: #fff;
+                        color: $hover_color;
+                    }
+                }
+            }
+        }
+    }
+}

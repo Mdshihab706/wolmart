@@ -1,0 +1,108 @@
+@import '../migzins/migzins';
+@import '../variables/variables';
+
+#shop_banner {
+    .banner_menu {
+        padding: 15px 0;
+
+        a {
+            font-size: 13px;
+            line-height: 19px;
+            color: $primary_color;
+        }
+
+        span i {
+            font-size: 10px;
+        }
+
+        .shop_home {
+            color: $secendary_color;
+            @include time;
+
+            &:hover {
+                color: $primary_color;
+            }
+        }
+    }
+
+    .shopBanner_img {
+        padding: 75px 85px;
+        @include radious_5;
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 40px;
+            color: $primary_color;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            color: #fff;
+            margin-bottom: 20px;
+
+        }
+
+        .shopBaner_button a {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 14px;
+            @include button ($clr: #fff);
+            width: fit-content;
+            @include time;
+
+            &:hover {
+                background: #454545;
+            }
+        }
+    }
+
+    .shop_brand {
+        display: flex;
+        padding: 30px 0;
+        gap: 5px;
+    }
+
+    .shop_cattegory {
+        display: flex;
+        gap: 30px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 30px;
+        .sngleShop_cattergory {
+            img {
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                @include time;
+            }
+
+            h4 {
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 16px;
+                color: $primary_color;
+                text-align: center;
+                margin-top: 15px;
+                @include time;
+            }
+
+            &:hover img {
+                transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                -o-transform: scale(1.1);
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            }
+            &:hover h4 {
+               color: $hover_color;
+            }
+
+        }
+    }
+}

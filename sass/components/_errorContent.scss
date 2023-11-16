@@ -1,0 +1,56 @@
+// @import '../migzins/migzins';
+@import '../migzins/migzins';
+@import '../variables/variables';
+
+#error_content{
+    .errContent_head{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 0;
+        a{
+            font-size: 13px;
+            line-height: 19px;
+            color: #666;
+        }
+        span{
+            font-size: 10px;
+        }
+        .err_404{
+            color: $primary_color;
+        }
+    }
+    .imgWrapper{
+       background: #f7f7f7;
+       padding: 145px;
+       .img_text{
+        margin-top: 50px;
+        text-align: center;
+        h2{
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 36px;
+            span{
+                color: #ff9933 !important;
+            }
+        }
+        p{
+            line-height: 26px;
+            font-size: 14px;
+            color: #999;
+            margin-top: 5px;
+            margin-bottom: 35px;
+        }
+        a{
+            @include button;
+            @include time;
+            span{
+                margin-left: 10px;
+            }
+            &:hover{
+                background: #454545;
+            }
+        }
+       }
+    }
+}

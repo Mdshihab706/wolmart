@@ -1,0 +1,206 @@
+#vebStore_main {
+    .store_menu {
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        padding: 15px 0;
+
+        a {
+            font-size: 13px;
+            color: $secendary_color;
+        }
+
+        span {
+            font-size: 10px;
+            color: $secendary_color;
+            margin: 0 5px;
+        }
+
+        .shop_home {
+            color: $primary_color;
+        }
+    }
+
+    .storeTwind_menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+
+        .filtre {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            h4 {
+                padding: 10px 13px;
+                border: 2px solid $hover_color;
+                font-size: 14px;
+                font-weight: 700;
+                color: $hover_color;
+                @include radious_5;
+                @include time;
+
+                span {
+                    i {
+                        margin-right: 10px;
+                        font-size: 15px;
+                    }
+                }
+
+                &:hover {
+                    background: $hover_color;
+                    color: #fff;
+                }
+
+            }
+
+            p {
+                font-size: 14px;
+                color: $primary_color;
+            }
+        }
+
+        .short_by {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            h5 {
+                font-size: 14px;
+                color: $secendary_color;
+                line-height: 21px;
+            }
+
+            select {
+                padding: 9px 15px;
+                border-color: #eee;
+                @include radious_5;
+            }
+
+            .store_nav {
+                color: #c8c8c8;
+                @include time;
+
+                &:hover {
+                    color: $primary_color;
+                }
+            }
+
+            span {
+                cursor: pointer;
+
+                i {
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+
+    .sngle_venStore {
+        border: 1px solid #eee;
+        margin-top: 25px;
+        @include radious_5;
+
+        .store_img {
+            position: relative;
+            img {
+                @include radious_5;
+            }
+
+            &::after{
+                content: "";
+                width: 82px;
+                height: 82px;
+                background: #f93;
+                @include borderRaduos_50;
+                position: absolute;
+                top: 50%;
+                right: -10%;
+                transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+                z-index: -1;
+            }
+            .venMini_img {
+                @include timeOne;
+                width: 82px !important;
+                @include borderRaduos_50;
+                border: 1px solid #eee;
+                position: absolute;
+                top: 50%;
+                right: -10%;
+                transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+            }
+        }
+
+        .store_text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            padding-left: 30px;
+
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                color: $primary_color;
+            }
+
+            ul {
+                display: flex;
+                margin-top: 15px;
+
+                li {
+                    i {
+                        font-size: 13px;
+                        color: #f93;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            p {
+                font-size: 13px;
+                color: $secendary_color;
+                margin-bottom: 15px;
+            }
+
+            a {
+                font-size: 14px;
+                font-weight: 600;
+                color: $primary_color;
+                position: relative;
+                width: fit-content;
+
+                &::after {
+                    content: "";
+                    height: 3px;
+                    width: 0%;
+                    background: $primary_color;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    @include timeOne;
+                    @include translate_x;
+                }
+
+                &:hover {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &:hover{
+            .venMini_img{
+                right: -8%;
+            }
+        }
+    }
+}

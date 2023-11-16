@@ -1,0 +1,222 @@
+@import '../migzins/migzins';
+@import '../variables/variables';
+
+#arrivels_footer {
+    background: #F8F8F8;
+ // ======footer_sarch part start=======
+    .footer_sarch {
+        padding: 25px 0;
+        background: $hover_color;
+
+        .srch_text {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .srch_icon i {
+                font-size: 47px;
+                color: #fff;
+            }
+
+            h4 {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 19px;
+                color: #fff;
+                margin-bottom: 3px;
+            }
+
+            p {
+                font-size: 13px;
+                line-height: 20px;
+                color: #fff;
+            }
+        }
+
+        .foot_subscribe {
+            input {
+                height: 47px;
+                width: 70%;
+                padding: 0 15px;
+                border: none;
+                outline: none;
+
+                @include radious_5;
+            }
+
+            button {
+                height: 47px;
+                width: 29%;
+                border: none;
+                background: $primary_color;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 14px;
+                @include radious_5;
+            }
+        }
+    }
+// ======footer_sarch part end=======
+// ======footer_logo part start=======
+    .footer_logo {
+        padding: 50px;
+        border-bottom: 1px solid #eee;
+
+        .logo_part {
+            .foot_logo {
+                width: 144px;
+            }
+
+            p {
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 27px;
+                color: $primary_color;
+                margin: 10px 0;
+            }
+
+            a {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 18px;
+                color: $primary_color;
+            }
+
+            .secend_p {
+                font-weight: 400;
+                color: #666;
+                margin: 5px 0 20px;
+                width: 290px;
+            }
+
+            .foot_icon {
+                ul {
+                    display: flex;
+                    gap: 10px;
+
+                    li {
+                        height: 32px;
+                        width: 32px;
+                        background: $hover_color;
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                        text-align: center;
+                        a {
+                            i {
+                                font-size: 14px;
+                                color: #fff;
+                                line-height: 32px;
+                            }
+                        }
+                        &:nth-child(2) {
+                            background: #00ADEF ;
+                        }
+                        &:nth-child(3) {
+                            background: #CC0001 ;
+                        }
+                        &:nth-child(4) {
+                            background: #2C567E ;
+                        }
+                        &:nth-child(5) {
+                            background: #F96A02 ;
+                        }
+
+                    }
+                }
+            }
+        }
+        .sngle_logo{
+            ul{
+                h3{
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 14px;
+                    color: $primary_color;
+                    margin-bottom: 20px;
+                }
+                li{
+                    a{
+                        font-size: 13px;
+                        line-height: 15px;
+                        color: #666;
+                        margin-bottom: 10px;
+                        @include time;
+                        &:hover{
+                            color: $hover_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+ // ======footer_logo part end=======
+ // ======footer_cattagory part end=======
+    .footer_cattagory{
+        padding: 50px 0;
+        .sngle_cattagory{
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            h6{
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 14px;
+                color: #666;
+                display: inline-block;
+            }
+            a{
+                font-size: 13px;
+                line-height: 13px;
+                color: #666;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: "";
+                    height: 100%;
+                    width: 1px;
+                    background: #ccc;
+                   margin: 0 9px;
+
+                }
+                &:last-child{
+                    &::after{
+                        width: 0;
+                    }
+                }
+                @include time;
+                &:hover{
+                    color: $hover_color;
+                }
+            }
+        }
+    }
+ // ======footer_cattagory part end=======
+ // ======footer_coppyright part end=======
+ .footer_copyright{
+    padding: 30px 0;
+    border-top: 1px solid #eee;
+    .copyright_text{
+        p{
+            font-size: 13px;
+            line-height: 24px;
+            color: #666;
+        }
+    }
+    .copyright_payment{
+        display: flex;
+        gap: 40px;
+        justify-content: end;
+        p{
+            font-size: 13px;
+            line-height: 24px;
+            color: #666;
+        }
+    
+    }
+ }
+ // ======footer_coppyright part end=======
+}

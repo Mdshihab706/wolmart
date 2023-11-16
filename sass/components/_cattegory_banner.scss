@@ -1,0 +1,116 @@
+#cattergory_banner {
+    .icon_wraper {
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: 22px 0;
+        margin: 30px 0;
+
+        .sngle_icon {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+
+            span {
+                i {
+                    font-size: 35px;
+                    color: $hover_color;
+                }
+
+            }
+
+            .icon_text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5px;
+
+                h4 {
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 16px;
+                    color: $primary_color;
+                }
+
+                p {
+                    font-size: 13px;
+                    line-height: 13px;
+                    color: $secendary_color;
+                }
+            }
+        }
+    }
+
+    .cattagory_img {
+        margin: 30px 0 60px;
+        position: relative;
+
+        img {
+
+            @include radious_5;
+        }
+
+        .bannerImg_text {
+            position: absolute;
+            left: 6.4%;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+
+            h3 {
+                font-size: 18px;
+                line-height: 21px;
+                color: $primary_color;
+                margin-bottom: 8px;
+
+                span {
+                    font-weight: 700;
+                    color: #f77c29;
+                }
+            }
+
+            h2 {
+                font-size: 26px;
+                line-height: 30px;
+                color: $primary_color;
+                font-weight: 800;
+            }
+
+            h4 {
+                font-size: 26px;
+                line-height: 30px;
+                color: $primary_color;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 22px;
+                color: $secendary_color;
+
+                span {
+                    font-weight: 700;
+                    color: #f77c29;
+                }
+            }
+
+        }
+        .bannerImg_textTwo{
+            h3{
+                color: #c4c4c5;
+            }
+            h2{
+                color: #fff;
+            }
+            h4{
+                color: #fff;
+            }
+            p{
+                color: #fff;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,63 @@
+@import '../migzins/migzins';
+@import '../variables/variables';
+
+
+#pages_store {
+    padding: 100px 0;
+    background: #FAFAFB;
+    .store_img {
+        margin-bottom: 100px;
+        img {
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+}
+    }
+    .store_text{
+        h3{
+            font-size: 34px;
+            font-weight: 700;
+            color: $primary_color;
+        }
+        p{
+            font-size: 14px;
+            line-height: 26px;
+            color: $secendary_color;
+            margin: 20px 0 30px
+        }
+        a{
+            @include button;
+            @include time;
+            &:hover{
+                background: #454545;
+            }
+        }
+    }
+    .award{
+        h2{
+            font-size: 30px;
+            font-weight: 600;
+            color: $primary_color;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .sngle_awarde{
+            text-align: center;
+            .award_img{
+                width: 106px;
+                margin: 0 auto;
+            }
+        }
+        p{
+            margin-top: 20px;
+            font-size: 20px;
+            color: $primary_color
+        }
+    }
+}
+
+
+
+

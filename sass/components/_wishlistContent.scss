@@ -1,0 +1,181 @@
+#wishlisht_content{
+    .wishlist_heder{
+        h2{
+            font-size: 34px;
+            font-weight: 700;
+            padding: 65px 0;
+            text-align: center;
+            background: #eee;
+        }
+        .heder_menu{
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 0;
+            a{
+                font-size: 13px;
+                line-height: 19px;
+                color: #666;
+            }
+            span{
+                font-size: 10px;
+            }
+            .err_404{
+                color: $primary_color;
+            }
+        }
+        .list_title{
+            h3{
+                font-size: 24px;
+                font-weight: 700;
+                padding: 50px 0;
+            }
+        }
+        .list_wrapper{
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            .list_menu{
+                    display: flex;
+                   justify-content: space space-evenly;
+                   gap: 106px;
+            }
+          
+        }
+        .sngleWish{
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            .wishImg{
+                position: relative;
+                img{
+                    width: 100px !important;
+                }
+                span{
+                    position: absolute;
+                    color: $primary_color;
+                    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+                    background: #fff;
+                    height: 20px;
+                    width: 20px;
+                    text-align: center;
+                    line-height: 20px;
+                    @include borderRaduos_50;
+                    top: -10px;
+                    font-size: 13px;
+                    left: 90px;
+                    @include time;
+                    &:hover{
+                        color: $hover_color;
+                    }
+                }
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                p{
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $secendary_color;
+                }
+            }
+            .wishRate{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 100%;
+                h4{
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: $primary_color;
+                }
+                p{
+                    font-size: 14px;
+                    color: $hover_color;
+                }
+            }
+            .wishButton{
+                display: flex;
+                align-items: center;
+                height: 100%;    
+                justify-content: end;
+                a{
+                    font-size: 13px;
+                    font-weight: 600;
+                    border: 1px solid #ccc;
+                    color: $primary_color;
+                    padding: 11px 27px;
+                    line-height: 13px;
+                    @include radious_5;
+                }
+                .addCard{
+                    background: $primary_color;
+                    color: #fff;
+                    margin-left: 10px;
+                }
+            }
+        }
+        .wish_icon{
+            display: flex;
+            padding-top: 20px;
+            padding-bottom: 50px;
+            gap: 20px;
+            h6{
+                font-size: 20px;
+                font-weight: 700;
+                color: $primary_color;
+                line-height: 32px;
+            }
+            ul{
+                display: flex;
+                gap: 10px;
+                li{
+                    a{
+                        font-size: 14px;
+                        line-height: 32px;
+                        width: 32px;
+                        height: 32px;
+                        border: 1px solid #eee;
+                        @include borderRaduos_50;
+                        text-align: center;
+                        color: $secendary_color;
+                        @include time;
+                    }
+                    &:first-child a{
+                        &:hover{
+                            background: #1B4F9B;
+                            color: #fff;
+                        }
+                    }
+                    &:nth-child(2) a{
+                        &:hover{
+                            background: #00ADEF;
+                            color: #fff;
+                        }
+                    }
+                    &:nth-child(3) a{
+                        &:hover{
+                            background: #F96A02;
+                            color: #fff;
+                        }
+                    }
+                    &:nth-child(4) a{
+                        &:hover{
+                            background: #DD4B39;
+                            color: #fff;
+                        }
+                    }
+                    &:nth-child(5) a{
+                        &:hover{
+                            background: #3C8A38;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+

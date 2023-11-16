@@ -1,0 +1,25 @@
+#pages_counter{
+    padding-bottom: 100px;
+    .sngle_counter{
+        text-align: center;
+        h2{
+            font-size: 60px;
+            font-weight: 800;
+            color: #ccc;
+        }
+        h3{
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            color: $primary_color;
+            margin: 10px 0 15px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 26px;
+            color: $secendary_color;
+            width: 290px;
+            margin: 0 auto;
+        }
+    }
+}

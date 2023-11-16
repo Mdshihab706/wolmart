@@ -1,0 +1,413 @@
+@import '../migzins/migzins';
+@import '../variables/variables';
+
+
+
+#blogContent {
+    .blog_heder {
+        padding: 70px 0;
+        background: #eee;
+        text-align: center;
+
+        h2 {
+            font-size: 34px;
+            font-weight: 700;
+            line-height: 37px;
+            color: $primary_color;
+        }
+    }
+
+    .blogContent_menu {
+        padding: 15px 2px;
+        border-bottom: 1px solid #eee;
+
+        a {
+            font-size: 13px;
+            line-height: 19px;
+            color: $primary_color;
+
+            i {
+                font-size: 10px;
+                margin: 0 5px;
+            }
+        }
+    }
+
+    .blog_left {
+        .blog_item {
+            margin-top: 30px;
+
+            .item_img {
+                overflow: hidden;
+
+                img {
+                    @include time;
+                    @include radious_5;
+                }
+            }
+
+            &:hover img {
+                transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                -o-transform: scale(1.1);
+            }
+
+            h3 {
+                font-size: 13px;
+                line-height: 16px;
+                color: $hover_color;
+                margin-top: 20px;
+                margin-bottom: 5px;
+            }
+
+            a {
+                font-size: 18px;
+                font-weight: 600;
+                color: $primary_color;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 13px;
+                line-height: 24px;
+                color: $secendary_color;
+                margin-bottom: 20px;
+
+                span {
+                    color: $hover_color;
+
+                    &:hover {
+                        color: $primary_color;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            h6 {
+                font-size: 13px;
+                font-weight: 600;
+                color: $secendary_color;
+                margin-bottom: 10px;
+
+                a {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: $primary_color;
+
+                    &:hover {
+                        color: $hover_color;
+                    }
+                }
+
+                span {
+                    font-size: 14px;
+                    color: $primary_color;
+                    font-weight: 400;
+
+                    &:hover {
+                        color: $hover_color;
+                    }
+                }
+            }
+        }
+
+        .blogPage_Prevnext {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+
+            a {
+                font-size: 14px;
+                color: #aaa;
+                @include time;
+
+                span {
+
+                    margin: 0 6px;
+                }
+
+                &:hover {
+                    color: $primary_color;
+                }
+            }
+
+            .shop_number {
+                a {
+                    height: 39px;
+                    width: 30px;
+                    color: $primary_color;
+                    font-size: 14px;
+                    text-align: center;
+                    line-height: 40px;
+
+                    &:hover {
+                        border: 1px solid #eee;
+                    }
+                }
+
+                span a {
+                    border: 1px solid #eee;
+                    height: 40px !important;
+                    width: 30px !important;
+                }
+            }
+
+            &:hover {
+                color: $primary_color;
+            }
+        }
+    }
+
+    .blogRight_content {
+        margin-top: 30px;
+
+        //======blog_catagory prt strt
+        .blog_catagory {
+            form {
+                border: 1px solid #eee;
+                @include radious_5;
+                padding: 9px 15px;
+                color: $secendary_color;
+
+                input {
+                    width: 88%;
+                    border: none;
+                    outline: none;
+                    font-size: 12px;
+                    color: $secendary_color;
+                }
+
+                button {
+                    width: 10%;
+                    border: none;
+                    outline: none;
+                    background: none;
+
+                    i {
+                        font-size: 18px;
+                        color: $secendary_color;
+                    }
+                }
+            }
+
+            .catagory_text {
+                h3 {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: $primary_color;
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+                }
+
+                ul {
+                    li {
+                        margin-bottom: 15px;
+
+                        a {
+                            font-size: 14px;
+                            color: $primary_color;
+                            line-height: 18px;
+                            @include time;
+                            &:hover{
+                                color: $hover_color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //======blog_catagory prt strt 
+
+        //======popularPost prt strt 
+        .popular_post {
+            h2 {
+                font-size: 16px;
+                font-weight: 600;
+                margin-top: 25px;
+                padding-bottom: 5px;
+            }
+
+            .wrapper_post {
+                position: relative;
+
+                .snlge_post {
+                    margin-top: 20px;
+                    display: flex;
+                    gap: 15px;
+
+                    .post_img {
+                        width: 80px;
+
+                        img {
+                            @include radious_5;
+                        }
+                    }
+
+                    .post_text {
+                        width: 180px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        a {
+                            font-size: 13px;
+                            color: $secendary_color;
+                        }
+
+                        p {
+                            font-size: 13px;
+                            color: $primary_color;
+                            font-weight: 500;
+                            line-height: 18px;
+                            margin-top: 5xpx;
+                        }
+                    }
+                }
+
+                .prevArrow {
+                    position: absolute;
+                    top: -22px;
+                    right: 6%;
+                    z-index: 99;
+                    color: #777;
+                }
+
+                .nextArrow {
+                    position: absolute;
+                    top: -22px;
+                    right: 0;
+                    color: #777;
+                }
+            }
+        }
+       
+    }
+
+    //======popularPost prt strt    
+    //======Custom_Block prt strt   
+
+    .Custom_Block {
+        h2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: $primary_color;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 22px;
+            color: $secendary_color;
+        }
+    }
+
+    //======Custom_Block prt end    
+    //======Browse_Tags prt end   
+
+    .Browse_Tags {
+        position: sticky;
+        top: 20px;
+        left: 0;
+        h2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: $primary_color;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+
+            li {
+
+                a {
+                    font-size: 13px;
+                    padding: 5px 10px;
+                    border: 1px solid #ccc;
+                    color: $primary_color;
+                    @include radious_5;
+                    @include time;
+
+                    &:hover {
+                        color: $hover_color;
+                        border-color: $hover_color;
+                    }
+                }
+            }
+        }
+    
+
+    //======Browse_Tags prt end    
+    //======Calendar prt end  
+    .Calendar {
+        h2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: $primary_color;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            padding: 17px 10px;
+            background: $hover_color;
+            @include radious_5;
+            text-align: center;
+        }
+
+        .month_name {
+            ul {
+                display: flex;
+                gap: 25px;
+                justify-content: center;
+                margin-top: 20px;
+
+                li {
+                    width: 12px;
+                    font-size: 13px;
+                    font-weight: 700;
+                    line-height: 16px;
+                    color: $primary_color;
+
+                }
+            }
+        }
+
+        .mont_date {
+            ul {
+                display: flex;
+                gap: 25px;
+                justify-content: center;
+                margin-top: 20px;
+
+                li {
+                    width: 11px;
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: $primary_color;
+
+                }
+
+                .cngColor {
+                    color: #999;
+                }
+            }
+        }
+    }
+}
+
+    //======Calendar prt end    
+
+}
